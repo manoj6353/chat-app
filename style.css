@@ -1,0 +1,512 @@
+* 
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0px;
+}
+header
+{
+    margin-top: 1rem;
+}
+.container
+{
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 auto;
+    /* border: 1px solid; */
+}
+.df
+{
+    display: flex;
+}
+.jcb
+{
+    justify-content: space-between;
+}
+.fdc
+{
+    flex-direction: column;
+}
+.aic
+{
+    align-items: center;
+}
+.dfw
+{
+ flex-wrap: wrap;
+}
+.jcc
+{
+    justify-content: center;
+}
+ul
+{
+    list-style-type: none;
+}
+.a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+.btnn
+{
+    background-color: white;
+    color: #1565D8;
+    text-decoration: none;
+    border: 1px solid #1565D8;
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+a.a
+{
+    padding: 15px;
+}
+.section2-image
+{
+    width : 45%;
+}
+.content
+{
+    width: 55%;
+    padding-left: 60px;
+}
+.p
+{
+    font-size: 21px;
+    color: grey;
+}
+.h1
+{
+    font-size: 60px;
+}
+.section2-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+.column
+{
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    width: calc(100% / 2);
+}
+.box-btn
+{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 15px;
+    background-color: #1565D8;
+    font-size: 18px;
+    color: white;
+    border-radius: .7rem;
+}
+.box-link
+{
+    margin: 4% 0%;
+}
+.section3
+{
+    margin-top: 4%;
+}
+.section3-label
+{
+    color: #36B37E;
+}
+.section3-h2
+{
+    color: #183B56;
+}
+.section3-p
+{
+    width : 40%;
+    text-align: center;
+    color: grey;
+}
+.section3-gap
+{
+    gap : 40px;
+}
+.section4
+{
+    margin-top: 2rem;
+}
+.section4-column
+{
+    width: calc(100% / 3);
+}
+.cols
+{
+    margin-top: 10px;
+    padding: 40px 40px;
+    border: 1px solid grey;
+    border-radius: 18px;
+}
+.row 
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+.section4-column
+{
+    padding: 0 16px;
+}
+.icons
+{
+    border: 1px solid grey;
+    border-radius: .8rem;
+    padding: 10px;
+}
+.cols a
+{
+    font-size: 20px;
+    text-decoration: none;
+}
+.cols p
+{
+    color: grey;
+}
+.section5
+{
+    margin-top: 2rem;
+    background-image: url('Image1.png');
+    padding-top: 200px;
+}
+.section5-1
+{
+    padding: 2rem;
+    background-color: white;
+    width: 400px;
+    border-radius: 16px;
+    opacity: 90px;
+    text-align: left;
+}
+.section6
+{
+    margin-top: 8rem;
+}
+.section6-row
+{
+    margin: 0 -16px;
+}
+.section6-cols
+{
+    padding: 0 16px;
+    margin-top: 2rem;
+}
+.section6-cols
+{
+    width: calc(100% / 3);
+}
+.section6-cols label
+{
+    color: #36B37E;
+}
+.section6-cols h2
+{
+    color: #183B56;
+}
+.section6-cols h3
+{
+    font-size: 25px;
+}
+.section6-icons
+{
+    border: 1px solid grey;
+    border-radius: .8rem;
+    padding: 10px;
+}
+.line
+{
+    margin-top: 8rem;
+}
+.section7
+{
+    margin-top: 8rem;
+}
+.section7 .service label
+{
+    color: #36B37E;
+}
+.section7 .service h2
+{
+    font-size: 40px;
+    color: #183B56;
+}
+.section7 .service-p
+{
+    color: grey;
+    width : 40%;
+    text-align: center;
+}
+.section7-image1, .section7-image2
+{
+    position: relative;
+}
+.section7-content2
+{
+    position: absolute;
+    color: black;
+    width: 500px;
+    text-align: left;
+    padding: 40px;
+    bottom: -4px;
+    color: white;
+    font-size: 20px;
+}
+.section7-1
+{
+    margin-top: 2rem;
+}
+.section8
+{
+    margin-top: 8rem;
+}
+.section8 label
+{
+    color: #36B37E;
+}
+.section8 h2
+{
+    color: #183B56;
+}
+.section8-cols
+{
+    width: calc(100% / 5);
+}
+.section8-gap
+{
+    gap : 70px;
+}
+.section8-img img
+{
+    width : 20px;
+}
+.section8 i
+{
+    color: gray;
+}
+.section8 .text
+{
+    font-size: 20px;
+}
+.section9
+{
+    margin-top: 8rem;
+}
+.section9-rows{
+    position: relative;
+    margin-top: 4rem
+}
+.section9-cols 
+{
+    position: relative;
+}
+.section9-rows .three-img
+{
+    display: flex;
+}
+.section9-rows .three-img img
+{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+.section9-rows .three-img img:nth-child(1)
+{
+    top: 20%;
+    left: calc(50% - 30px);
+}
+.section9-rows .three-img img:nth-child(2)
+{
+    top: 15%;
+    left: 50%
+}
+.section9-rows .three-img img:nth-child(3)
+{
+    top: 20%;
+    left: calc(50% + 30px);
+}
+.section9-rows .three-img ~ p
+{
+    position: absolute;
+}
+.fw-600 
+{
+    font-weight: 600;
+}
+.section9-cols .colsgap
+{
+    height: 10px;
+}
+.section9-rows .down
+{
+    text-align: center;
+    width : 200px;
+}
+.section9-gap
+{
+    gap : 80px;
+}
+.section9-cols .pilotstar
+{
+    height : 30px;
+}
+.cols2
+{
+    text-align: center;
+}
+.cols-2
+{
+    top : 20px;
+}
+footer
+{
+    margin-top: 8rem;
+    background-color: #152938;
+}
+.fw-600 
+{
+    font-weight: 600;
+}
+.fs-30
+{
+    font-size: 30px
+}
+.col-2{
+    width: calc(100% / 2);
+}
+.txtclr
+{
+    color: white;
+}
+footer .news-later input{
+    width: 67%;
+    padding:15px 20px;;
+    border-radius: 11px;
+    outline:none;
+    border:none;
+}
+footer .news-later a.btn-start{
+    width: 30%;
+    text-decoration: none;
+    background: #1565D8;
+    border: 1px solid #1565D8;
+    color: white;
+    padding:15px 20px;
+    text-align:center;
+    border-radius: 11px;
+}
+.txt-gray
+{
+    color: gray;
+}
+footer .right img
+{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border:1px solid rgb(218, 213, 213);
+    border-radius: 12px;
+    margin-right: 20px;
+}
+.footer-col 
+{
+    margin-top: 4rem;
+    position: relative;
+}
+footer .right > div 
+{
+    background: white;
+    color: black;
+    width: 370px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 1px rgb(211, 208, 208);
+}
+footer .right > div:nth-child(1) 
+{
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    z-index: 1;
+}
+footer .right > div:nth-child(2) 
+{
+    position: relative;
+    top: 120px;
+    left: 19%;
+}
+footer .right-price,footer .right-simple 
+{
+    background-color: #fff;
+}
+.footer-line
+{
+    opacity: 0.1;
+    margin-top:  4rem;
+    color: grey;
+    margin-bottom: 4rem;
+}
+.db
+{
+    display: block;
+    font-size: 15px;
+}
+.my-2 
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem
+}
+.unstyled 
+{
+    list-style-type: none;
+}
+.top-bar ~ ul li
+{
+    line-height: 46px;
+}
+.top-bar ~ ul
+{
+    padding: 0px;
+}
+.top-bar h3
+{
+    margin: 0px;
+}
+a
+{
+    text-decoration: none;
+}
+.cwidth
+{
+    width: calc(100% / 5);
+}
+.frowsgap
+{
+    gap : 100px;
+}
+.my-1 
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem
+}
+.oval
+{
+    height: 60px;
+    width: 60px;
+    background: blue; 
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+}
