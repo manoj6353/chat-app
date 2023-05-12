@@ -22,14 +22,14 @@
         box-sizing: border-box;
         backdrop-filter: blur(10px);
       }
-      #input {
+      .input {
         border: none;
         padding: 0 1rem;
         flex-grow: 1;
         border-radius: 2rem;
         margin: 0.25rem;
       }
-      #input:focus {
+      .input:focus {
         outline: none;
       }
       #form > button {
@@ -57,31 +57,73 @@
   </head>
   <body>
     <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
+    <div id="form" action="">
+      <div id="error-container"></div>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        class="input"
+        value=""
+        placeholder="Enter your name!"
+        onclick="setUsername()"
+      />
+      <input
+        type="button"
+        name="button"
+        value="Let me chat"
+        onclick="setUsername()"
+      />
+      <!-- <input id="input" autocomplete="off" /><button>Send</button> -->
+    </div>
   </body>
-  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
   <script>
     var socket = io();
-
-    var messages = document.getElementById("messages");
-    var form = document.getElementById("form");
-    var input = document.getElementById("input");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (input.value) {
-        socket.emit("chat message", input.value);
-        input.value = "";
+    function setUsername() {
+      let message = document.getElementById("name");
+      message.addEventListener("keydown", function (e) {
+        if (e.keyCode == 13) {
+          socket.emit("setUsername", document.getElementById("name").value);
+        }
+      });
+      if (message.value != "") {
+        socket.emit("setUsername", document.getElementById("name").value);
       }
+    }
+    var user;
+    socket.on("userExists", function (data) {
+      document.getElementById("error-container").innerHTML = data;
     });
-
-    socket.on("chat message", function (msg) {
-      var item = document.createElement("li");
-      item.textContent = msg;
-      messages.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
+    socket.on("userSet", function (data) {
+      user = data.username;
+      let add = document.getElementById("form");
+      form.innerHTML =
+        '<input type="text" class="input" id="message" onclick="sendMessage()">\
+        <button type="button" name="button" onclick="sendMessage()">Send</button>';
+    });
+    function sendMessage() {
+      let message = document.getElementById("message");
+      message.addEventListener("keydown", function (e) {
+        if (e.keyCode == 13) {
+          let msg = message.value;
+          if (msg) {
+            socket.emit("msg", { message: msg, user: user });
+          }
+          message.value = "";
+        }
+      });
+      let msg = message.value;
+      if (msg) {
+        socket.emit("msg", { message: msg, user: user });
+      }
+      message.value = "";
+    }
+    socket.on("newmsg", function (data) {
+      if (user) {
+        document.getElementById("messages").innerHTML +=
+          "<div><b>" + data.user + "</b>: " + data.message + "</div>";
+      }
     });
   </script>
 </html>
